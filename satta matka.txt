@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neeraj Bhai Khaiwal</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #090909;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 710px;
+  min-height: 100vh;
+  margin: auto;
+  padding: 25px 20px 20px;
+  background: radial-gradient(ellipse, #17150e, #090909 75%);
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 32px;
+}
+
+.crown {
+  font-size: 48px;
+  margin-bottom: 18px;
+}
+
+.heading {
+  font-family: Georgia, serif;
+  color: #f1d65a;
+  font-size: clamp(29px, 7vw, 44px);
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.subheading {
+  color: #e9d35c;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  letter-spacing: 5px;
+  margin-top: 16px;
+  text-transform: uppercase;
+}
+
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+  min-height: 95px;
+  border: 1px solid #51491b;
+  border-radius: 19px;
+  background: linear-gradient(110deg, #211f12, #111111);
+}
+
+.info-icon {
+  font-size: 31px;
+  min-width: 44px;
+  text-align: center;
+}
+
+.info-text {
+  font-size: 19px;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.info-text strong {
+  display: block;
+  color: #f1d75d;
+  font-size: 20px;
+}
+
+.section-title {
+  text-align: center;
+  color: #e9ce4d;
+  font-size: 19px;
+  letter-spacing: 7px;
+  margin: 34px 0 22px;
+}
+
+.rates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.rate-card {
+  background: #18181a;
+  border: 1px solid #4c471d;
+  border-radius: 20px;
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 25px;
+}
+
+.rate-card::before {
+  content: "";
+  display: block;
+  height: 5px;
+  background: linear-gradient(90deg, #c6a900, #f7e779, #c6a900);
+  margin-bottom: 22px;
+}
+
+.rate-name {
+  color: #bdbdbd;
+  font-size: 19px;
+  margin-bottom: 17px;
+}
+
+.rate-price {
+  color: #f5df65;
+  font-size: clamp(25px, 5.5vw, 36px);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.rate-status {
+  color: #29bf64;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 13px;
+}
+
+.rating {
+  width: 75%;
+  max-width: 350px;
+  margin: 30px auto 10px;
+  padding: 17px 10px;
+  text-align: center;
+  border: 1px solid #176331;
+  border-radius: 50px;
+  background: #102016;
+}
+
+.stars {
+  color: #e9cb41;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+.score {
+  color: #24c75e;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.rating-label {
+  text-align: center;
+  color: #aaa;
+  font-size: 19px;
+  margin-bottom: 30px;
+}
+
+.telegram-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  min-height: 105px;
+  padding: 20px 10px;
+  border-radius: 23px;
+  background: linear-gradient(120deg, #0789ce, #08b0e6);
+  color: white;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: 1px solid #1688b9;
+}
+
+.telegram-icon {
+  font-size: 34px;
+}
+
+.footer-text {
+  text-align: center;
+  color: #555;
+  font-size: 16px;
+  letter-spacing: 4px;
+  margin: 22px 0 25px;
+}
+
+/* ADSBIG AGENCY */
+
+.agency {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 12px 17px;
+  border-radius: 40px;
+  background: #10252b;
+  border: 1px solid #28434a;
+  text-decoration: none;
+  color: #cbdde0;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.agency-icon {
+  color: #00c6c6;
+  font-size: 20px;
+}
+
+.agency strong {
+  color: white;
+}
+
+.agency-label {
+  text-align: center;
+  font-size: 10px;
+  color: #666;
+  letter-spacing: 2px;
+  margin-top: 15px;
+}
+
+@media (max-width: 380px) {
+  .container {
+    padding: 20px 12px;
+  }
+
+  .header {
+    padding-top: 65px;
+  }
+
+  .info-box {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .info-text {
+    font-size: 16px;
+  }
+
+  .info-text strong {
+    font-size: 17px;
+  }
+
+  .rate-name {
+    font-size: 16px;
+  }
+
+  .rate-price {
+    font-size: 25px;
+  }
+
+  .rate-status {
+    font-size: 14px;
+  }
+
+  .telegram-btn {
+    font-size: 21px;
+    min-height: 85px;
+  }
+
+  .agency {
+    font-size: 13px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <div class="crown">👑</div>
+
+    <h1 class="heading">
+      Neeraj Bhai<br>
+      Khaiwal
+    </h1>
+
+    <div class="subheading">
+      The Trusted Name
+    </div>
+  </div>
+
+  <div class="info-box">
+    <div class="info-icon">⚡</div>
+    <div class="info-text">
+      तुरंत मैच के हिसाब
+      <strong>Instant Payment Settlement</strong>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <div class="info-icon">👥</div>
+    <div class="info-text">
+      20,000+ लोगों का भरोसा
+      <strong>20,000+ Trusted Members</strong>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <div class="info-icon">💎</div>
+    <div class="info-text">
+      सबसे शानदार रेट
+      <strong>Best Rates Guaranteed</strong>
+    </div>
+  </div>
+
+  <div class="section-title">
+    TODAY'S RATES
+  </div>
+
+  <div class="rates">
+
+    <div class="rate-card">
+      <div class="rate-name">जोड़ी (Jodi)</div>
+      <div class="rate-price">10 ➜ 990</div>
+      <div class="rate-status">Best in Market</div>
+    </div>
+
+    <div class="rate-card">
+      <div class="rate-name">हरफ (Haruf)</div>
+      <div class="rate-price">100 ➜ 990</div>
+      <div class="rate-status">Best in Market</div>
+    </div>
+
+  </div>
+
+  <div class="rating">
+    <span class="stars">★★★★★</span>
+    <span class="score">9.9/10</span>
+  </div>
+
+  <div class="rating-label">
+    Channel Rating
+  </div>
+
+  <!-- CLIENT TELEGRAM LINK -->
+
+  <a href="https://t.me/YOUR_CLIENT_LINK"
+     class="telegram-btn"
+     target="_blank">
+
+    <span class="telegram-icon">✈</span>
+    <span>JOIN TELEGRAM</span>
+
+  </a>
+
+  <div class="footer-text">
+    PREMIUM • SECURE • TRUSTED
+  </div>
+
+  <!-- ADSBIG AGENCY TELEGRAM LINK -->
+
+  <a href="https://t.me/YOUR_AGENCY_LINK"
+     class="agency"
+     target="_blank">
+
+    <span class="agency-icon">✣</span>
+    <span>Ad Manage by</span>
+    <strong>ADSBIG AGENCY</strong>
+
+  </a>
+
+  <div class="agency-label">
+    ADVERTISEMENT MANAGEMENT
+  </div>
+
+</div>
+
+</body>
+</html>
